@@ -217,6 +217,7 @@
     <a href="#/videos" data-route="videos">Latest Videos</a>
   </nav>
   <div class="actions">
+    <a class="btn btn-ghost" target="_blank" rel="noopener" href="https://www.facebook.com/profile.php?id=61594573995634" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.8c0-.9.3-1.5 1.6-1.5h1.7V4.4c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.5-4 4.1v2.4H7.7V14h2.7v8z"/></svg><span class="long">Facebook</span></a>
     <a class="btn btn-ghost" target="_blank" rel="noopener" href="https://www.youtube.com/@GlobalTravelFortyFour">
       <svg viewBox="0 0 24 24"><path d="M21.6 7.2s-.2-1.5-.8-2.2c-.8-.9-1.7-.9-2.1-1C15.9 3.8 12 3.8 12 3.8h0s-3.9 0-6.7.2c-.4 0-1.3.1-2.1 1-.6.7-.8 2.2-.8 2.2S2.2 9 2.2 10.7v1.5c0 1.8.2 3.5.2 3.5s.2 1.5.8 2.2c.8.9 1.9.9 2.4 1 1.7.2 7.4.2 7.4.2s3.9 0 6.7-.2c.4 0 1.3-.1 2.1-1 .6-.7.8-2.2.8-2.2s.2-1.8.2-3.5v-1.5c0-1.8-.2-3.5-.2-3.5zM9.9 14.6V8.4l5.8 3.1z"/></svg>
       <span class="long">Watch on YouTube</span>
@@ -231,12 +232,14 @@
 
 <footer class="site">
   <span>© <span id="year"></span> Global Travel Forty Four — travel documentaries about real life around the world. Video content and thumbnails belong to the channel.</span>
-  <a target="_blank" rel="noopener" href="https://www.youtube.com/@GlobalTravelFortyFour">youtube.com/@GlobalTravelFortyFour</a>
+  <span><a target="_blank" rel="noopener" href="https://www.youtube.com/@GlobalTravelFortyFour">YouTube</a> · <a target="_blank" rel="noopener" href="https://www.facebook.com/profile.php?id=61594573995634">Facebook</a></span>
 </footer>
 
 <script>
 const CHANNEL_URL = "https://www.youtube.com/@GlobalTravelFortyFour";
 const SUB_URL = CHANNEL_URL + "?sub_confirmation=1";
+const FB_URL = "https://www.facebook.com/profile.php?id=61594573995634";
+const fbIcon = `<svg viewBox="0 0 24 24"><path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.8c0-.9.3-1.5 1.6-1.5h1.7V4.4c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.5-4 4.1v2.4H7.7V14h2.7v8z"/></svg>`;
 function watchUrl(id){ return "https://www.youtube.com/watch?v=" + id; }
 
 let VIDEOS = [];
@@ -375,6 +378,7 @@ function renderComingSoon(){
       <div class="cta">
         <a class="btn btn-yt" target="_blank" rel="noopener" href="${SUB_URL}">Subscribe free</a>
         <a class="btn btn-ghost" target="_blank" rel="noopener" href="${CHANNEL_URL}">${watchIcon}Visit channel</a>
+        <a class="btn btn-ghost" target="_blank" rel="noopener" href="${FB_URL}">${fbIcon}Facebook</a>
       </div>
     </div>
     <div class="hero-art" style="background:#fff;"><img style="object-fit:contain;" src="logo.jpg" alt="Global Travel Forty Four logo"><span class="stamp mono">FIRST EPISODE · COMING SOON</span></div>
